@@ -33,7 +33,7 @@ function emitFondo() {
                 <v-row>
                     <v-col cols="12">
                         <img class="imagenes" src="../assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg" alt=""
-                            @click="guardarFondo('/src/assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg')">
+                            @click="guardarFondo('../assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg')">
                         <img class="imagenes" src="../assets/fondos/_00081e4f-0d49-425d-9071-374010469a99.jpg" alt=""
                             @click="guardarFondo('/src/assets/fondos/_00081e4f-0d49-425d-9071-374010469a99.jpg')">
                         <img class="imagenes" src="../assets/fondos/_047de72b-db57-415a-a4bc-5f2173aae35e.jpg" alt=""
