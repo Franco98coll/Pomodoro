@@ -12,7 +12,7 @@ import { watch } from 'vue';
 import DialogLoginComp from './DialogLogin.comp.vue';
 
 
-const fondoFinal = ref('../../src/assets/fondos/_dd4ba058-f4f0-4e3e-9041-43a269189ba9.jpg');
+const fondoFinal = ref('/src\assets\fondos\_d3042f1d-ee63-490e-a189-b81a60644f8f.jpg');
 const prueba = ref(0);
 
 const valor = ref(25);
