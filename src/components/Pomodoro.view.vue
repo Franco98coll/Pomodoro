@@ -154,6 +154,7 @@ watch(() => fondoFinal.value, (newValue, oldValue) => {
 
 
 
+
 @media only screen and (max-width: 625px) {
     .celu {
         display: flex;
