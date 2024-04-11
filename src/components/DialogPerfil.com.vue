@@ -105,19 +105,18 @@ async function uploadFile() {
     try {
         const formData = new FormData();
         formData.append('file', selectedFile.value);
-
+        formData.append('Email', userEmail.value); // Agrega el correo electrónico al formulario
 
         // Realiza la solicitud POST al backend
         const response = await axios.post('http://localhost:3000/upload', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
-            body: {
-                Email: userEmail.value
-            }
         });
         console.log(response.data); // Maneja la respuesta del backend como desees
-        userPhoto.value = response.data.path;
+        const fullPath = response.data.path;
+        const desiredPath = fullPath.replace('/usr/src/app/', ''); // Eliminar el prefijo no deseado
+        userPhoto.value = desiredPath;
         console.log(userPhoto.value);
     } catch (error) {
         console.error('Error al subir el archivo:', error);
