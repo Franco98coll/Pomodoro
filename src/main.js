@@ -13,8 +13,8 @@ import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDnDG4H2wPFO2UCoeIIrhckB_uiCQJ7K-8",
-    authDomain: "https://tomatempo.netlify.app",
-    projectId: "Tomatempo",
+    authDomain: "pomodoro-fb6a8.firebaseapp.com",
+    projectId: "pomodoro-fb6a8",
     storageBucket: "pomodoro-fb6a8.appspot.com",
     messagingSenderId: "1057727873271",
     appId: "1:1057727873271:web:17b69062d65c0dd5e013f2",
