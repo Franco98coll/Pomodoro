@@ -2,7 +2,7 @@
     <div>
         <v-dialog v-model="isDialogActive" width="500">
             <template v-slot:activator="{ props }">
-                <v-btn v-bind="props" prepend-icon="mdi-cog" text="Configuracion"> </v-btn>
+                <v-btn class="boton" v-bind="props" prepend-icon="mdi-cog" text="Configuracion"> </v-btn>
             </template>
             <v-card>
                 <v-card-title class="d-flex justify-center align-center">
@@ -149,5 +149,9 @@ const cambiarColor = (color) => {
 .letras {
     font-size: 2rem;
     font-family: cursive;
+}
+
+.boton {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 </style>

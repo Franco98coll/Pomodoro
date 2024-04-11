@@ -260,7 +260,7 @@ watch(() => props.recreoL, (newVal, oldVal) => {
                 <h1 class="numeritos">{{ valueRecreoLargo }}</h1>
             </template>
         </v-progress-circular>
-        <v-btn class="mb-5" variant="tonal" @click="playPomodoro(Math.floor(props.valor / 60), props.valor % 60, 0)">
+        <v-btn class="mb-5 boton" @click="playPomodoro(Math.floor(props.valor / 60), props.valor % 60, 0)">
             <!-- <v-icon icon="mdi-play" /> -->
             <v-icon start>mdi-play </v-icon>
             Play
@@ -294,5 +294,9 @@ watch(() => props.recreoL, (newVal, oldVal) => {
     font-weight: bold;
     font-family: cursive;
 
+}
+
+.boton {
+    background-color: rgba(255, 255, 255, 0.7);
 }
 </style>
