@@ -33,12 +33,12 @@ function emitFondo() {
                 <v-row>
                     <v-col cols="12">
                         <img class="imagenes" src="../assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg" alt=""
-                            @click="guardarFondo('/src/assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg')">
+                            @click="guardarFondo('https://tomatempo.netlify.app/assets/fondos/_1e66e314-26f3-4905-85de-abab7c9775c9.jpg')">
                         <img class="imagenes" src="../assets/fondos/_00081e4f-0d49-425d-9071-374010469a99.jpg" alt=""
-                            @click="guardarFondo('/src/assets/fondos/_00081e4f-0d49-425d-9071-374010469a99.jpg')">
+                            @click="guardarFondo('https://tomatempo.netlify.app/assets/fondos/_00081e4f-0d49-425d-9071-374010469a99.jpg')">
                         <img class="imagenes" src="../assets/fondos/_047de72b-db57-415a-a4bc-5f2173aae35e.jpg" alt=""
-                            @click="guardarFondo('/src/assets/fondos/_047de72b-db57-415a-a4bc-5f2173aae35e.jpg')">
-                        <img @click="guardarFondo('/src/assets/fondos/_0c7337e2-19e4-4dbb-8b58-c37c80d41113.jpg')"
+                            @click="guardarFondo('https://tomatempo.netlify.app/assets/fondos/_047de72b-db57-415a-a4bc-5f2173aae35e.jpg')">
+                        <img @click="guardarFondo('https://tomatempo.netlify.app/assets/fondos/_0c7337e2-19e4-4dbb-8b58-c37c80d41113.jpg')"
                             class="imagenes" src="../assets/fondos/_0c7337e2-19e4-4dbb-8b58-c37c80d41113.jpg" alt="">
 
                     </v-col>
