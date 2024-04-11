@@ -100,7 +100,8 @@ watch(() => fondoFinal.value, (newValue, oldValue) => {
         <v-main>
             <div
                 :style="{ backgroundImage: 'url(' + fondoFinal + ')', backgroundSize: 'cover', backgroundPosition: '50%', backgroundPositionY: '70%' }">
-                <h1 class="letras">Pomodoro</h1>
+                <h1 class="letras">Tomatempo</h1>
+                <h5>pomodoro</h5>
                 <div class="card">
                     <v-container fluid>
                         <v-row class="celu">
