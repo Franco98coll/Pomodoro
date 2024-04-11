@@ -25,6 +25,7 @@ const userEmail = ref('');
 const idDelUsuario = ref();
 const recreoC = ref(5);
 const recreoL = ref(15);
+const acepto = ref(false);
 
 
 let intervalId = null;
@@ -73,62 +74,86 @@ watch(() => fondoFinal.value, (newValue, oldValue) => {
     fondoFinal.value = newValue;
     prueba.value++;
 });
+
+function aceptacion() {
+    acepto.value = true;
+}
 </script>
 
 <template>
-    <v-layout>
-        <v-navigation-drawer expand-on-hover rail>
+    <div v-if="acepto == false">
+        <v-card class="centrar">
+            <v-container>
+                <v-row class="d-flex flex-row">
+                    <v-col cols="3"></v-col>
+                    <v-col class="color" cols="6">
+                        <img src="https://tomatempo.netlify.app/assets/preview-CcAXIXJD.png" alt="" width="50px">
+                        <h3>Esta es un version Beta de esta aplicacion por lo tanto algunas funcionalidades
+                            podrian presentar errores. <br> Muchas gracias por su paciencia</h3>
+                        <v-btn @click="aceptacion"><v-icon>mdi-check</v-icon> Estoy de acuerdo</v-btn>
+                    </v-col>
+                    <v-col cols="3"></v-col>
+                </v-row>
+            </v-container>
+        </v-card>
+    </div>
+    <div v-if="acepto">
+        <v-layout>
+            <v-navigation-drawer expand-on-hover rail>
 
-            <DialogPerfil v-if="userName !== '' && userPhoto !== '' && userEmail !== ''" :userName="userName"
-                :userPhoto="userPhoto" :userEmail="userEmail" />
+                <DialogPerfil v-if="userName !== '' && userPhoto !== '' && userEmail !== ''" :userName="userName"
+                    :userPhoto="userPhoto" :userEmail="userEmail" />
 
-            <v-divider></v-divider>
+                <v-divider></v-divider>
 
-            <v-list density="compact" nav>
-                <DialogTareasComp :idDelUsuario="idDelUsuario" @abriraparte="abrirAparteHandler"
-                    :abrirAparte="abrirAparte" @closeDialog="cerrarAparte" />
+                <v-list density="compact" nav>
+                    <DialogTareasComp :idDelUsuario="idDelUsuario" @abriraparte="abrirAparteHandler"
+                        :abrirAparte="abrirAparte" @closeDialog="cerrarAparte" />
 
-                <DialogFondoComp @cambiar-fondo="capturaFondo" />
+                    <DialogFondoComp @cambiar-fondo="capturaFondo" />
 
-                <DialogLogin id="boton-google-container" @usuario-logueado="capturaUser" @idUser="userId" />
+                    <DialogLogin id="boton-google-container" @usuario-logueado="capturaUser" @idUser="userId" />
 
-                <!-- <BotonGoogle @newUser="idUser" @idUser="idUser" @usuario-logueado="capturaUser" /> -->
+                    <!-- <BotonGoogle @newUser="idUser" @idUser="idUser" @usuario-logueado="capturaUser" /> -->
 
-            </v-list>
-        </v-navigation-drawer>
+                </v-list>
+            </v-navigation-drawer>
 
-        <v-main>
-            <div
-                :style="{ backgroundImage: 'url(' + fondoFinal + ')', backgroundSize: 'cover', backgroundPosition: '50%', backgroundPositionY: '70%' }">
-                <h1 class="letras">Tomatempo</h1>
-                <h5>pomodoro</h5>
-                <div class="card">
-                    <v-container fluid>
-                        <v-row class="celu">
-                            <v-col cols="8" class="d-flex flex-column justify-center align-center">
-                                <Barra :recreoC="recreoC" :recreoL="recreoL" :color="color1" :valor="valor" />
-                                <Config @cambiar-horas="valorhandler">
-                                </Config>
+            <v-main>
 
-                            </v-col>
-                            <v-col v-if="abrirAparte === true" cols="4">
-                                <v-card>
-                                    <div class="d-flex justify-end">
-                                        <v-btn color="red" @click="cerrarAparte"><v-icon>mdi-close</v-icon></v-btn>
-                                    </div>
-                                    <Tareas v-if="idDelUsuario" :idDelUsuario="idDelUsuario" />
-                                </v-card>
-                            </v-col>
-                        </v-row>
-                    </v-container>
+                <div
+                    :style="{ backgroundImage: 'url(' + fondoFinal + ')', backgroundSize: 'cover', backgroundPosition: '50%', backgroundPositionY: '70%' }">
+                    <h1 class="letras">Tomatempo</h1>
+                    <h5>pomodoro</h5>
+                    <div class="card">
+                        <v-container fluid>
+                            <v-row class="celu">
+                                <v-col cols="8" class="d-flex flex-column justify-center align-center">
+                                    <Barra :recreoC="recreoC" :recreoL="recreoL" :color="color1" :valor="valor" />
+                                    <Config @cambiar-horas="valorhandler">
+                                    </Config>
+
+                                </v-col>
+                                <v-col v-if="abrirAparte === true" cols="4">
+                                    <v-card>
+                                        <div class="d-flex justify-end">
+                                            <v-btn color="red" @click="cerrarAparte"><v-icon>mdi-close</v-icon></v-btn>
+                                        </div>
+                                        <Tareas v-if="idDelUsuario" :idDelUsuario="idDelUsuario" />
+                                    </v-card>
+                                </v-col>
+                            </v-row>
+                        </v-container>
 
 
+                    </div>
                 </div>
-            </div>
 
-        </v-main>
+            </v-main>
 
-    </v-layout>
+        </v-layout>
+    </div>
+
 </template>
 
 <style scoped>
@@ -150,6 +175,25 @@ watch(() => fondoFinal.value, (newValue, oldValue) => {
     width: 100%;
     padding-left: 5px;
 
+}
+
+.centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.color {
+    background-color: #121212;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.color h3 {
+    margin: 20px;
 }
 
 
