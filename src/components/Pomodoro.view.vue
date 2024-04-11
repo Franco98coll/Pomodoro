@@ -121,10 +121,13 @@ function aceptacion() {
 
             <v-main>
 
-                <div
+                <div class="centrar-titulo"
                     :style="{ backgroundImage: 'url(' + fondoFinal + ')', backgroundSize: 'cover', backgroundPosition: '50%', backgroundPositionY: '70%' }">
-                    <h1 class="letras">Tomatempo</h1>
-                    <h5>pomodoro</h5>
+                    <div class="titulo">
+                        <h1 class="letras">Tomatempo</h1>
+                        <h5>pomodoro</h5>
+                    </div>
+
                     <div class="card">
                         <v-container fluid>
                             <v-row class="celu">
@@ -194,6 +197,26 @@ function aceptacion() {
 
 .color h3 {
     margin: 20px;
+}
+
+.titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: -40px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.centrar-titulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 
