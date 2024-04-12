@@ -93,7 +93,7 @@ function playPomodoro(hours, minutes, seconds) {
                         playRecreoLargo(Math.floor(props.recreoL), 0);
                     }, 4000);
                 }
-            } console.log('recreo ', props.recreoC);
+            }
             if (isPlaying) {
                 percentage.value = Math.round((totalSeconds / (hours * 3600 + minutes * 60 + seconds)) * 100);
             }
@@ -107,7 +107,6 @@ function playRecreo(duration) {
     if (duration === 0) {
         duration = 5;
     }
-    console.log('contador de recreos' + countRecreo);
     countRecreo++;
     let totalSeconds = duration * 60; // Convertir minutos a segundos
 
@@ -195,7 +194,6 @@ let isPlaying = false;
 function playSound() {
     let sound = new Audio(soundFile);
     sound.play();
-    console.log('sonando crack');
 }
 
 watch(() => props.valor, (newVal, oldVal) => {
