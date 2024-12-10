@@ -22,7 +22,7 @@ const logueado = ref(false);
 
 const registrar = async () => {
     try {
-        const response = await fetch(`http://localhost:3000/newUserGoogle`, {
+        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/newUserGoogle`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
