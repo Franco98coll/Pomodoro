@@ -86,7 +86,7 @@ const token = localStorage.getItem('Token');
 
 const loginNativo = async () => {
     try {
-        const response = await fetch(`http://localhost:3000/login`, {
+        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const loginNativo = async () => {
 
 const registrame = async () => {
     try {
-        const response = await fetch(`http://localhost:3000/newUser`, {
+        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/newUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
