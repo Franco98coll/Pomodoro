@@ -86,7 +86,7 @@ const token = localStorage.getItem('Token');
 
 const loginNativo = async () => {
     try {
-        const response = await fetch(`http://serverpomodoro-production.up.railway.app/login`, {
+        const response = await fetch(`https://serverpomodoro-production.up.railway.app/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -127,7 +127,7 @@ const loginNativo = async () => {
 
 const registrame = async () => {
     try {
-        const response = await fetch(`http://serverpomodoro-production.up.railway.app/newUser`, {
+        const response = await fetch(`https://serverpomodoro-production.up.railway.app/newUser`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
