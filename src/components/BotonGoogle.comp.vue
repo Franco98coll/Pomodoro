@@ -22,7 +22,7 @@ const logueado = ref(false);
 
 const registrar = async () => {
     try {
-        const response = await fetch(`serverpomodoro-production.up.railway.app/newUserGoogle`, {
+        const response = await fetch(`http://serverpomodoro-production.up.railway.app/newUserGoogle`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

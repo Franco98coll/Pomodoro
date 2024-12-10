@@ -108,7 +108,7 @@ async function uploadFile() {
         formData.append('Email', userEmail.value); // Agrega el correo electrónico al formulario
 
         // Realiza la solicitud POST al backend
-        const response = await axios.post('serverpomodoro-production.up.railway.app/upload', formData, {
+        const response = await axios.post('http://serverpomodoro-production.up.railway.app/upload', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
