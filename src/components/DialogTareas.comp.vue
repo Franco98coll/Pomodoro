@@ -32,11 +32,12 @@ const emit = defineEmits(['abriraparte'])
 
 const props = defineProps({
     idDelUsuario: Number,
-    abrirAparte: Boolean
+    abrirAparte: Boolean,
+    idUser: Number
 })
 
 
-const UserId = ref(props.UserId || props.idDelUsuario)
+const UserId = ref(props.idUser || props.idDelUsuario)
 
 // Variable reactiva para controlar la apertura/cierre del diálogo
 const isDialogActive = ref(false)

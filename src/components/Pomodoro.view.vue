@@ -107,7 +107,7 @@ function aceptacion() {
                 <v-divider></v-divider>
 
                 <v-list density="compact" nav>
-                    <DialogTareasComp :idDelUsuario="idDelUsuario" @abriraparte="abrirAparteHandler"
+                    <DialogTareasComp :idDelUsuario="idDelUsuario" :idUser="idUser" @abriraparte="abrirAparteHandler"
                         :abrirAparte="abrirAparte" @closeDialog="cerrarAparte" />
 
                     <DialogFondoComp @cambiar-fondo="capturaFondo" />
