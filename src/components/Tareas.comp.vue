@@ -43,18 +43,6 @@ const agregarTarea = async () => {
         console.error('Error:', error);
     }
 };
-onMounted(() => {
-    const auth = getAuth();
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            isAuthenticated.value = true;
-            console.log('Usuario autenticado:', user);
-        } else {
-            isAuthenticated.value = false;
-            console.log('Usuario no autenticado');
-        }
-    });
-});
 
 const toggleStatus = tarea => {
     tarea.Status = tarea.Status === 'true' ? 'false' : 'true';

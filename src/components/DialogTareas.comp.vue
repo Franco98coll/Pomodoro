@@ -36,7 +36,7 @@ const props = defineProps({
 })
 
 
-const UserId = ref(props.idDelUsuario)
+const UserId = ref(props.UserId || props.idDelUsuario)
 
 // Variable reactiva para controlar la apertura/cierre del diálogo
 const isDialogActive = ref(false)
