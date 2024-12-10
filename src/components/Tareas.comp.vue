@@ -24,7 +24,7 @@ const toggleEditing = (tarea) => {
 
 const agregarTarea = async () => {
     try {
-        const response = await fetch('https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/tarea', {
+        const response = await fetch('serverpomodoro-production.up.railway.app/tarea', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -49,7 +49,7 @@ const toggleStatus = tarea => {
 
 const obtenerTareas = async () => {
     try {
-        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/tareas`, {
+        const response = await fetch(`serverpomodoro-production.up.railway.app/tareas`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -70,7 +70,7 @@ obtenerTareas(); // Llamamos a la función obtenerTareas cuando el componente se
 
 const borrarTarea = async tarea => {
     try {
-        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/tarea`, {
+        const response = await fetch(`serverpomodoro-production.up.railway.app/tarea`, {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -90,7 +90,7 @@ const borrarTarea = async tarea => {
 
 const updateTarea = async tarea => {
     try {
-        const response = await fetch(`https://railway.app/project/681e9f43-bea6-405a-b5f3-c262e82e11d4/service/097dd457-0bc1-4ea9-96c2-05d17895d3fb?environmentId=0edc7a9d-20c9-4f64-9dcd-23eade88b02a/tarea`, {
+        const response = await fetch(`serverpomodoro-production.up.railway.app/tarea`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
