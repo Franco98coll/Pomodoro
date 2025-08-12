@@ -13,8 +13,8 @@
         <v-btn v-if="UserId" @click="abrirAparte"
           ><v-icon>mdi-open-in-new</v-icon>Abrir Aparte</v-btn
         >
-        <TareasComp v-if="props.idDelUsuario || props.idUser" />
-        <v-card-text
+        <TareasComp />
+        <!-- <v-card-text
           class="d-flex justify-center algin-center flex-column"
           v-else
         >
@@ -22,7 +22,7 @@
           <div class="d-flex justify-center algin-center mt-5">
             <v-btn @click="isDialogActive = False"> Aceptar </v-btn>
           </div>
-        </v-card-text>
+        </v-card-text> -->
       </v-card>
     </v-dialog>
   </div>
