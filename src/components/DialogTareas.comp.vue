@@ -10,7 +10,7 @@
     <!-- Define el diálogo de tareas -->
     <v-dialog v-model="isDialogActive" width="80%">
       <v-card class="d-flex justify-center align-center card">
-        <v-btn v-if="UserId" @click="abrirAparte"
+        <v-btn v-if="props.idUser || props.idDelUsuario" @click="abrirAparte"
           ><v-icon>mdi-open-in-new</v-icon>Abrir Aparte</v-btn
         >
         <TareasComp v-if="props.idDelUsuario" />
